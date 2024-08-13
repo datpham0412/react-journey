@@ -1,15 +1,11 @@
-import React, { useState } from "react";
-import Display from "../src/components/Prop_State/display";
+import React from "react";
+import Greeting from "../src/components/ConditionalRendering/IfStatements/Greeting";
 
 function App() {
-  const [message, setMessage] = useState("Hello, World!");
-
   return (
     <div>
-      <Display message={message} /> {/* Pass the message as a prop */}
-      <button onClick={() => setMessage("You clicked the button")}>
-        Click me
-      </button>
+      <Greeting isLoggedIn={true} />
+      <Greeting isLoggedIn={false} />
     </div>
   );
 }
