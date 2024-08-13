@@ -1,13 +1,15 @@
 import React from "react";
-import Mailbox from "../src/components/ConditionalRendering/LogicalOperator/Mailbox";
+import StatusMessage from "../src/components/ConditionalRendering/SwitchStatements/status";
 
 function App() {
   return (
     <div>
-      <Mailbox unreadMessage={["Hello", "World"]} />
-      <Mailbox unreadMessage={[]} />
+      <StatusMessage status="success" />{" "}
+      {/* Renders "Operation was successful!" */}
+      <StatusMessage status="error" /> {/* Renders "There was an error." */}
+      <StatusMessage status="loading" /> {/* Renders "Loading..." */}
+      <StatusMessage status="other" /> {/* Renders "Unknown status." */}
     </div>
   );
 }
-
 export default App;
