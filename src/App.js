@@ -1,11 +1,11 @@
 import React from "react";
-import Greeting from "../src/components/ConditionalRendering/TernaryOperator/Greeting";
+import Mailbox from "../src/components/ConditionalRendering/LogicalOperator/Mailbox";
 
 function App() {
   return (
     <div>
-      <Greeting isLoggedIn={true} />
-      <Greeting isLoggedIn={false} />
+      <Mailbox unreadMessage={["Hello", "World"]} />
+      <Mailbox unreadMessage={[]} />
     </div>
   );
 }
