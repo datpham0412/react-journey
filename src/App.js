@@ -1,11 +1,11 @@
 import React from "react";
-import Greeting from "../src/components/FunctionalComponents/Greeting";
+import Counter from "../src/components/state/useState";
 
 function App() {
   return (
     <div>
-      <Greeting name="Tad" />
-      <Greeting name="Neb" />
+      <h1>My Counter App</h1>
+      <Counter /> {/* Use the counter component*/}
     </div>
   );
 }
