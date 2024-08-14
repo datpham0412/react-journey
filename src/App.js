@@ -1,13 +1,12 @@
 import React from "react";
-import Counter from "./rendering/Class/Counter";
+import UserList from "../src/rendering/ReactiveEffect/UserList";
 
 function App() {
   return (
     <div>
-      <h1>My counter app</h1>
-      <Counter />
+      <h1>User List</h1>
+      <UserList />
     </div>
   );
 }
-
 export default App;
