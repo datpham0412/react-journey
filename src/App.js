@@ -1,40 +1,12 @@
-import React, { useState } from "react";
-import UserList from "../src/rendering/ListsAndKeys/UserList";
+import { useRef } from "react";
 
-function App() {
-  // Initial list of users:
-  const initialUsers = [
-    { id: 1, name: "Dat Pham" },
-    { id: 2, name: "Naot" },
-    { id: 3, name: "Hna" },
-  ];
+export default function App() {
+  let ref = useRef(0);
 
-  const [users, setUsers] = useState(initialUsers);
+  function handleClick() {
+    ref.current = ref.current + 1;
+    alert("You clicked " + ref.current + " times");
+  }
 
-  // Function to add new user
-  const addUser = () => {
-    const newUser = { id: users.length + 1, name: `User ${users.length + 1}` };
-    setUsers([...users, newUser]);
-  };
-
-  // Function to remove the last user
-  const removeUser = () => {
-    setUsers(users.slice(0, -1));
-  };
-
-  // Function to shuffle the list of the user
-  const shuffleUser = () => {
-    setUsers([...users].sort(() => Math.random() - 0.5));
-  };
-  return (
-    <div>
-      <h1>User list</h1>
-      <button onClick={addUser}>Add User</button>
-      <button onClick={removeUser}>Remove User</button>
-      <button onClick={shuffleUser}>Shuffle User</button>
-      <UserList users={users} />
-    </div>
-  );
+  return <button onClick={handleClick}>Click me</button>;
 }
-
-export default App;
