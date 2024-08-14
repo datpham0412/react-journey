@@ -1,3 +1,20 @@
+import React from "react";
+
+function UserList({ users }) {
+  return (
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default UserList;
+
+// Using UserList component:
+
+/* 
 import React, { useState } from "react";
 import UserList from "../src/rendering/ListsAndKeys/UserList";
 
@@ -38,3 +55,5 @@ function App() {
 }
 
 export default App;
+
+*/
