@@ -1,12 +1,11 @@
 import React from "react";
-import Form from "../src/rendering/EventHandler/Form";
+import MyComponentWithLogging from "./rendering/Higher-OrderComponent/MyComponentWithLogging";
 
 function App() {
   return (
     <div>
-      <Form />
+      <MyComponentWithLogging name="DatPham" />
     </div>
   );
 }
-
 export default App;
