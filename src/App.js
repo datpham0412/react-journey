@@ -1,10 +1,10 @@
 import React from "react";
-import Counter from "../src/rendering/EventHandler/Counter";
+import Form from "../src/rendering/EventHandler/Form";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <Form />
     </div>
   );
 }
