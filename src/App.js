@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 function ExpensiveCalculation({ calculate }) {
   console.log("ExpensiveCalculation component re-rendered");
   return (
     <div>
-      <h2>Result of calculation {calculate()}</h2>
+      <h2>Result of calculation: {calculate()}</h2>
     </div>
   );
 }
@@ -13,14 +13,15 @@ function App() {
   const [count, setCount] = useState(0);
   const [otherState, setOtherState] = useState(false);
 
-  const calculate = () => {
+  // Without useCallback(), this function would be re-created on every render
+  const calculate = useCallback(() => {
     console.log("Calculating...");
     return count * 2;
-  };
+  }, [count]);
 
   return (
     <div>
-      <h1>Without use callback example</h1>
+      <h1>Use useCallback() example</h1>
       <button onClick={() => setCount(count + 1)}>
         Increment count: {count}
       </button>
@@ -31,4 +32,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
