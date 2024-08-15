@@ -1,29 +1,31 @@
-import React from "react";
-import { useOnlineStatus } from "./rendering/Hooks/useOnlineStatus";
+import { useState } from "react";
 
-function StatusBar() {
-  const isOnline = useOnlineStatus();
-  return <h1>{isOnline ? "✅ Online" : "❌ Disconnected"}</h1>;
-}
+export default function App() {
+  const [firstName, setFirstName] = useState("Dat");
+  const [lastName, setLastName] = useState("Pham");
 
-function SaveButton() {
-  const isOnline = useOnlineStatus();
-  function handleSaveClick() {
-    console.log("✅ Progress saved");
+  function handleFirstNameChange(e) {
+    setFirstName(e.target.value);
+  }
+  function handleLastNameChange(e) {
+    setLastName(e.target.value);
   }
 
   return (
-    <button disabled={!isOnline} onClick={handleSaveClick}>
-      {isOnline ? "Save progress" : "Reconnecting..."}
-    </button>
-  );
-}
-
-export default function App() {
-  return (
-    <>
-      <SaveButton />
-      <StatusBar />
-    </>
+    <div>
+      <label>
+        First Name:
+        <input value={firstName} onChange={handleFirstNameChange}></input>
+      </label>
+      <label>
+        Last Name:
+        <input value={lastName} onChange={handleLastNameChange}></input>
+      </label>
+      <p>
+        <b>
+          Good morning {firstName} {lastName}
+        </b>
+      </p>
+    </div>
   );
 }
