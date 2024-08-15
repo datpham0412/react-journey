@@ -1,3 +1,23 @@
+import { useState } from "react";
+
+export function useFormInput(initialValue) {
+  const [value, setValue] = useState(initialValue);
+
+  function handleChange(e) {
+    setValue(e.target.value);
+  }
+
+  const inputProps = {
+    value: value,
+    onChange: handleChange,
+  };
+
+  return inputProps;
+}
+
+// App.js
+
+/* 
 import React from "react";
 import { useFormInput } from "./rendering/Hooks/CustomHook2";
 
@@ -24,3 +44,5 @@ function App() {
   );
 }
 export default App;
+
+*/
