@@ -21,9 +21,7 @@ function App() {
   return (
     <div>
       <h1>Without use callback example</h1>
-      <button onClick={() => setCount(count + 1)}>
-        Increment count: {count}
-      </button>
+      <button onClick={() => setCount(count + 1)}>Increment count</button>
       <button onClick={() => setOtherState(!otherState)}>
         Toggle other state
       </button>
@@ -31,4 +29,3 @@ function App() {
     </div>
   );
 }
-export default App;
