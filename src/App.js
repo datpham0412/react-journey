@@ -1,5 +1,5 @@
 import React from "react";
-import DataFetchingComponent from "./ApiCalls/axios";
+import DataFetchingComponent from "./ApiCalls/fetch";
 
 function App() {
   return (
