@@ -5,8 +5,6 @@
   "dependencies": {
     "@apollo/client": "^3.11.4",
     "@radix-ui/react-toggle": "^1.1.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.4",
     "graphql": "^16.9.0",
@@ -39,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1"
   }
 }
