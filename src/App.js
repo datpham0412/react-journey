@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Button from "./Testing/Button"; // Import the Button component
+import SimpleForm from "./Forms/simpleForm"; // Import SimpleForm component
 
 const App = () => {
   const handleClick = () => {
@@ -10,7 +9,7 @@ const App = () => {
   return (
     <div>
       <h1>My App</h1>
-      <Button onClick={handleClick}>Click me!</Button>
+      <SimpleForm /> {/* Add SimpleForm component */}
     </div>
   );
 };
