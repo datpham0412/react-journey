@@ -1,15 +1,11 @@
 import React from "react";
-import SimpleForm from "./Forms/simpleForm"; // Import SimpleForm component
+import AnimatedBox from "./Animation/AnimatedBox"; // Import AnimatedBox component
 
 const App = () => {
-  const handleClick = () => {
-    alert("Button clicked!");
-  };
-
   return (
     <div>
       <h1>My App</h1>
-      <SimpleForm /> {/* Add SimpleForm component */}
+      <AnimatedBox /> {/* Add AnimatedBox component */}
     </div>
   );
 };
